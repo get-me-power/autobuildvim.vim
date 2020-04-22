@@ -1,8 +1,9 @@
-function autobuildvim#build() abort
+function! autobuildvim#build() abort
   if has('vim')
-    call system('cd' . g:VIM_PATH)
-    execute "!make"
-    execute "!make install"
+    call system('cd' . autobuildvim#path#setting())
+    call autobuildvim#configure#load()
+    call system("sudo make")
+    call system("sudo make install")
   endif
 endfunction
 
