@@ -1,3 +1,3 @@
 function! autobuildvim#configure#load() abort
-  execute "./configure"
+  call system("./configure")
 endfunction
