@@ -1,0 +1,40 @@
+*autobuildvim.txt*		 This plugin is for building Vim within Vim.
+
+Version: 1.0
+Author:  IK
+License: MIT
+
+
+=============================================================================
+CONTENTS					*autobuildvim-contents*
+
+INTRODUCTION			|autobuildvim-introduction|
+USAGE				|autobuildvim-usage|
+SETTING                         |autobuildvim-setting|
+CHANGELOG			|autobuildvim-changelog|
+
+
+=============================================================================
+INTRODUCTION					*autobuildvim-introduction*
+
+*autobuildvim* is for building Vim within Vim.
+
+https://github.com/kazukazuinaina/autobuildvim.vim
+
+=============================================================================
+USAGE						*autobuildvim-usage*
+
+Simply run *:VimBuild* command
+
+=============================================================================
+SETTING						*autobuildvim-setting*
+
+Comming soon...
+
+=============================================================================
+CHANGELOG					*autobuildvim-changelog*
+
+TODO
+
+=============================================================================
+vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
