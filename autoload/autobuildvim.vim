@@ -1,6 +1,6 @@
 function! autobuildvim#build() abort
-  if has('vim')
-    call system('cd' . autobuildvim#path#setting())
+  if !has('nvim')
+    execute('cd ' . autobuildvim#path#setting() . 'vim')
     call autobuildvim#configure#load()
     call system("sudo make")
     call system("sudo make install")

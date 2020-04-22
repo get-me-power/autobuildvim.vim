@@ -8,9 +8,7 @@ if exists('g:loaded_autobuildvim')
 endif
 let g:loaded_autobuildvim = 1
 
-if !exists('g:VIM_PATH')
-  let g:VIM_PATH = $HOME
-endif
+command! -nargs=0 VimBuild call autobuildvim#build()
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
