@@ -1,9 +1,10 @@
+scriptencoding utf-8
+
 function! autobuildvim#build() abort
   if !has('nvim')
-    execute('cd ' . autobuildvim#path#setting() . 'vim/src')
-    call autobuildvim#configure#load()
-    call system("sudo make")
-    call system("sudo make install")
+    execute('cd ' . autobuildvim#path#setting() . '/vim/src')
+    call autobuildvim#system#sudo('make')
+    " call autobuildvim#system#sudo('make install')
   endif
 endfunction
 
