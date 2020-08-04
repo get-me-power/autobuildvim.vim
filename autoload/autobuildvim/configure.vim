@@ -1,12 +1,14 @@
+scriptencoding utf-8
+
 function! autobuildvim#configure#load() abort
-  echo system("./configure " . autobuildvim#configure#parser())
+  let l:configure_command = './configure ' . join(autobuildvim#configure#parser(), ' \')
+  execute('cd ' . autobuildvim#path#setting() . '/vim/src')
+  call term_start(l:configure_command, {
+        \ 'term_finish': 'close',
+        \ })
 endfunction
 
 function! autobuildvim#configure#parser() abort
-  let l:configure_setting = get(g:, 'autobuildvim_configure_setting', '')
-  if len(l:configure_setting) != 0
-    return join(l:configure_setting, " ")
-  else
+  let l:configure_setting = get(g:, 'autobuildvim_configure_setting', [])
     return l:configure_setting
-  endif
 endfunction
