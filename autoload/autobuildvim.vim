@@ -8,6 +8,6 @@ function! autobuildvim#build() abort
   endif
 endfunction
 
-function s:update_vim(vim_path)
+function! s:update_vim(vim_path)
   call system(printf('git clone https://github.com/vim/vim %s', a:vim_path))
 endfunction
